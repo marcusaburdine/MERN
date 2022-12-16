@@ -11,6 +11,12 @@ export default function OrderHistoryPage (props) {
     <>
       <h1>OrderHistoryPage</h1>
       <button onClick={handleCheckToken}>Check When My Login Expires</button>
-    </>
-  )
+      {
+            expDate?
+            <p>{expDate.toLocaleString()}</p>
+            :
+            ""
+        }
+        </>
+    )
 }
